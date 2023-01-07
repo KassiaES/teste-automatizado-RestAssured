@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4dd0e43-c47e-462b-8e05-87d39f33ab48" name="Changes" comment="" />
+    <list default="true" id="d4dd0e43-c47e-462b-8e05-87d39f33ab48" name="Changes" comment="trabalho de teste automatizado com Rest Assured">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/User/UserTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/User/UserTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/test-classes/User/UserTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/User/UserTests.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -22,6 +26,31 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="recentBranches">
+      <RecentBranches>
+        <option name="branchesForRepo">
+          <list>
+            <RecentBranchesForRepo>
+              <option name="branches">
+                <list>
+                  <RecentBranch>
+                    <option name="branchName" value="main" />
+                    <option name="lastUsedInstant" value="1673129225" />
+                  </RecentBranch>
+                  <RecentBranch>
+                    <option name="branchName" value="master" />
+                    <option name="lastUsedInstant" value="1673129224" />
+                  </RecentBranch>
+                </list>
+              </option>
+              <option name="repositoryRootUrl" value="file://$PROJECT_DIR$" />
+            </RecentBranchesForRepo>
+          </list>
+        </option>
+      </RecentBranches>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -50,7 +79,22 @@
       <recent name="C:\Users\PC\Desktop\code studies\APIAutomationRestAssured" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.UserTests.CreateNewUser_WithVAlidData_ReturnOk">
+  <component name="RunManager" selected="JUnit.UserTests">
+    <configuration name="UserTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="APIAutomationRestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="User.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="User" />
+      <option name="MAIN_CLASS_NAME" value="User.UserTests" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserTests.CreateNewUser_WithVAlidData_ReturnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="APIAutomationRestAssured" />
       <extension name="coverage">
@@ -67,7 +111,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="UserTests.GetLogin_ValidUser_ReturnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="UserTests.CreateNewUser_WithValidData_ReturnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="APIAutomationRestAssured" />
       <extension name="coverage">
         <pattern>
@@ -77,7 +121,39 @@
       </extension>
       <option name="PACKAGE_NAME" value="User" />
       <option name="MAIN_CLASS_NAME" value="User.UserTests" />
-      <option name="METHOD_NAME" value="GetLogin_ValidUser_ReturnOk" />
+      <option name="METHOD_NAME" value="CreateNewUser_WithValidData_ReturnOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTests.DeleteUser_UserExists_ReturnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="APIAutomationRestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="User.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="User" />
+      <option name="MAIN_CLASS_NAME" value="User.UserTests" />
+      <option name="METHOD_NAME" value="DeleteUser_UserExists_ReturnOk" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserTests.GetUserByUsername_usarIsValid_ReturnOk" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="APIAutomationRestAssured" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="User.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="User" />
+      <option name="MAIN_CLASS_NAME" value="User.UserTests" />
+      <option name="METHOD_NAME" value="GetUserByUsername_usarIsValid_ReturnOk" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -85,8 +161,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.UserTests" />
+        <item itemvalue="JUnit.UserTests.DeleteUser_UserExists_ReturnOk" />
+        <item itemvalue="JUnit.UserTests.GetUserByUsername_usarIsValid_ReturnOk" />
+        <item itemvalue="JUnit.UserTests.CreateNewUser_WithValidData_ReturnOk" />
         <item itemvalue="JUnit.UserTests.CreateNewUser_WithVAlidData_ReturnOk" />
-        <item itemvalue="JUnit.UserTests.GetLogin_ValidUser_ReturnOk" />
       </list>
     </recent_temporary>
   </component>
@@ -99,6 +178,14 @@
       <option name="presentableId" value="Default" />
       <updated>1673112031577</updated>
     </task>
+    <task id="LOCAL-00001" summary="trabalho de teste automatizado com Rest Assured">
+      <created>1673129282048</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1673129282048</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -111,5 +198,14 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="trabalho de teste automatizado com Rest Assured" />
+    <option name="LAST_COMMIT_MESSAGE" value="trabalho de teste automatizado com Rest Assured" />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/APIAutomationRestAssured$UserTests.ic" NAME="UserTests Coverage Results" MODIFIED="1673130453905" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>User.*</FILTER>
+    </SUITE>
   </component>
 </project>

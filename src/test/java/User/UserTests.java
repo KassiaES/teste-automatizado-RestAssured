@@ -2,20 +2,14 @@ package User;
 
 import Entities.User;
 import com.github.javafaker.Faker;
-
 import io.restassured.RestAssured;
-import io.restassured.filter.log.ErrorLoggingFilter
-import io.restassured.filter.log.RequestLoggingFilter;
-import io.restassured.filter.log.ResponseLoggingFilter;
-
 import io.restassured.http.ContentType;
-import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.junit.jupiter.api.*;
 
 import static io.restassured.RestAssured.given;
 import static io.restassured.config.LogConfig.logConfig;
-import static io.restassured.module.jsv.JsonSchemaValidator.*;
+import static io.restassured.module.jsv.JsonSchemaValidator.matchesJsonSchemaInClasspath;
 import static org.hamcrest.Matchers.*;
 
 
@@ -44,14 +38,14 @@ public class UserTests {
 
     @BeforeEach
     void setRequest() {
-        request = given()
+        request = given().config(RestAssured.config().logConfig(logConfig().enableLoggingOfRequestAndResponseIfValidationFails()))
                 .header("api-key", "special-key")
                 .contentType(ContentType.JSON);
     }
 
     @Test
     @Order(1)
-    public void CreateNewUser_WithVAlidData_ReturnOk() {
+    public void CreateNewUser_WithValidData_ReturnOk() {
 
         request
                 .body(user)
@@ -66,6 +60,7 @@ public class UserTests {
     }
 
     @Test
+    @Order(2)
     public void GetLogin_ValidUser_ReturnOk() {
 
         request
@@ -82,6 +77,7 @@ public class UserTests {
     }
 
     @Test
+    @Order(3)
     public void GetUserByUsername_usarIsValid_ReturnOk() {
 
         request
@@ -98,6 +94,7 @@ public class UserTests {
     }
 
     @Test
+    @Order(4)
     public void DeleteUser_UserExists_ReturnOk() {
 
         request
@@ -109,6 +106,19 @@ public class UserTests {
                 .and().time(lessThan(2000L))
                 .log();
 
+
+    }
+
+    @Test
+    @Order(5)
+    public void CreateNewUser_WithInvalidBody_ReturnOk() {
+
+        request
+                .body("teste")
+                .when()
+                .post("/user")
+                .then()
+                .extract().response();
 
     }
 
